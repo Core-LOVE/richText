@@ -1,8 +1,11 @@
 local richText = {
 	_NAME = "richText",
 	_VERSION = '1.0',
+	_DESCRIPTION = "Custom text drawing/parsing in Love2d with tags and stuff.",
 	
+	_URL = 'https://github.com/Core-LOVE/richText',
 	
+	_LICENSE = 'MIT license',
 }
 
 local convert
