@@ -1,12 +1,27 @@
 local richText = require 'superText'
 
-local str = richText[[<italic>Yep you got it right, it's italic text!</italic>
-	<bold>And it's not like there is no way to bold your text up</bold>
-]]
+local str = richText ""
+
+local a = ""
+
+local rot = 0
 
 function love.draw()
-	str:draw{
-		x = 16,
+	-- rot = rot + 8
+	str:render{
+		x = 16 + 400,
 		y = 16,
+		
+		wrapLimit = 200,
+		align = "center",
+		
+		rotation = rot,z
 	}
+	
+	if love.keyboard.isDown 'z' then
+		a = a .. "Hello"
+		str = str .. "<rainbow>Hello</rainbow>"
+	end
+	
+	love.graphics.printf(a, 8, 16, 200, 'center')	
 end
